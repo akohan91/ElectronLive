@@ -1,0 +1,24 @@
+.wrapper_for_world {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    background-image: url('./images/tileGrass1.png');
+    position: relative;
+}
+
+.wrapper_for_world .world_cell {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top : 0;
+    left: 0;
+    transition: left 1s, top 1s;
+}
+
+
