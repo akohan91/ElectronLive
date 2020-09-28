@@ -15,9 +15,12 @@ let plan = [
 ];
 
 class World {
-  constructor(map, worldObjectFactory) {
+  constructor(map, worldObjectFactory, stepTime) {
     this._map = map;
     this._wObjects = worldObjectFactory.wObjects;
+    setInterval(() => {
+      this.step();
+    }, stepTime);
   }
 
   step() {
@@ -304,8 +307,5 @@ class Action {
   }
 }
 
-let w = new World(new Map(plan), new WorldObjectFactory(plan));
+let w = new World(new Map(plan), new WorldObjectFactory(plan), 100);
 
-setInterval(() => {
-  w.step();
-}, 500);
